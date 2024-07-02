@@ -2,6 +2,11 @@ const asyncHandler = require('express-async-handler');
 const requestIp = require('request-ip');
 const axios = require('axios');
 
+
+const hello = asyncHandler(async (req, res) => {
+    res.status(200).json({message: "Hello! Welcome!!"});
+})
+
 const greetVisitor = asyncHandler(async (req, res) => {
     const visitorName = req.query.visitor_name;
     const clientIp = requestIp.getClientIp(req);
@@ -33,4 +38,4 @@ const greetVisitor = asyncHandler(async (req, res) => {
     }
 })
 
-module.exports = greetVisitor;
+module.exports = { greetVisitor, hello };
