@@ -26,7 +26,8 @@
         "pg-hstore": "^2.3.4",
         "sequelize": "^6.37.3",
         "supertest": "^7.0.0",
-        "uuid": "^10.0.0"
+        "uuid": "^10.0.0",
+        "vercel": "^34.3.0"
     },
     "devDependencies": {
         "nodemon": "^3.1.3"
